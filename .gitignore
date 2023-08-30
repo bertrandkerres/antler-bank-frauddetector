@@ -1,2 +1,4 @@
 .venv/
 *.pyc
+*.ipynb
+input/fraud_detection.csv.zip
