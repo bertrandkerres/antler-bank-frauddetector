@@ -1,0 +1,74 @@
+/* Reset default browser styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Center content on the page */
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #d3d5f9;
+  }
+
+  
+  .upload-button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .upload-button:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Style for the custom file input button */
+  .custom-file-input {
+    background-color: #fff;
+    border: 2px solid #3498db;
+    color: #3498db;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+  }
+  
+  .custom-file-input:hover {
+    border-color: #2980b9;
+  }
+  
+  /* Style the table */
+table.dataframe {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+  }
+  
+  /* Style the table header */
+  table.dataframe th {
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  /* Style the table data cells */
+  table.dataframe td {
+    border: 1px solid #ccc;
+    padding: 8px;
+  }
+  
+  /* Style alternate rows for better readability */
+  table.dataframe tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  

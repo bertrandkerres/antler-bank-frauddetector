@@ -29,7 +29,10 @@ async def upload(request: Request, file: UploadFile = File(...)):
     f = file.file
     df = pd.read_csv(f)
     f.close()
-    df_predict = df.drop(labels=["From", "To"], axis=1)
+    try:
+        df_predict = df.loc[:, ["step", "customer", "age", "gender", "merchant", "category", "amount"]]
+    except KeyError:
+        df_predict = df.iloc[:, :6]
     y = model.predict(df_predict.values)
     df.insert(len(df.columns), "Fraud", y)
     context = {'request': request, 'table': df.loc[df.Fraud == 1., :].to_html()}

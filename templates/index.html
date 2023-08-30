@@ -4,21 +4,23 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>10x Fraud Detector</title>
-      <link rel="stylesheet" href="{{ url_for('static', path='bootstrap/css/bootstrap.min.css') }}">
-      <link rel="shortcut icon" href="{{ url_for('static', path='favicon.ico') }}">
+      <link rel="stylesheet" href="../static/stylesheet.css">
    </head>
    <body>
-    <div class="col-md-6 mx-auto text-center">
-      <form method="post" action="/upload"  enctype="multipart/form-data">
-         <label for="csvFile">Choose a CSV file</label><br><br>
-         <input type="file" id="csvFile" name="file" onchange="enableSubmitBtn();"><br><br>
-         <input type="submit" id="submitBtn" value="submit" disabled>
-      </form>
+      <div class="container" >
+         <h2>Upload transaction data</h2>
+         <p>This will run a machine learning algorithm (xgBoost) trained on the <a href="https://www.kaggle.com/datasets/ealaxi/banksim1">bank fraud dataset</a> and return suspected fraud cases.</p>
+         <p>Your file must contain the following columns: step, customer, age, gender, merchant, category, amount</p>
+         <form method="post" action="/upload"  enctype="multipart/form-data">
+            <label for="csvFile">Use csv file format</label><br><br>
+            <input type="file" id="csvFile" name="file" class="file-input" onchange="enableSubmitBtn();"><br><br>
+            <input type="submit" id="submitBtn" value="submit" disabled>
+         </form>
+      </div>
       <script>
          function enableSubmitBtn() {
             document.getElementById('submitBtn').removeAttribute("disabled");
          }
       </script>
-    </div>
    </body>
 </html>
