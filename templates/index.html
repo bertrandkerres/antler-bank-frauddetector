@@ -8,8 +8,8 @@
    </head>
    <body>
       <div class="container" >
-         <h2>Upload transaction data</h2>
-         <p>This will run a machine learning algorithm (xgBoost) trained on the <a href="https://www.kaggle.com/datasets/ealaxi/banksim1">bank fraud dataset</a> and return suspected fraud cases.</p>
+         <img src="../static/tenx.png">
+         <p>Here you can run a machine learning algorithm (xgBoost) trained on the <a href="https://www.kaggle.com/datasets/ealaxi/banksim1">bank fraud dataset</a> and return suspected fraud cases.</p>
          <p>Your file must be preprocessed as <a href="https://www.kaggle.com/code/turkayavci/fraud-detection-on-bank-payments">here</a> and contain the following columns: step, customer, age, gender, merchant, category, amount</p>
          <form method="post" action="/upload"  enctype="multipart/form-data">
             <label for="csvFile">Use csv file format</label><br><br>
